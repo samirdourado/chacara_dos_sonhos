@@ -1,17 +1,132 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import '@fontsource-variable/fraunces';
+@import '@fontsource-variable/nunito';
 
-@import "tailwindcss";
+/*
+ * Paleta Chácara dos Sonhos — derivada do logo.
+ *  mata    → verde principal (texto do logo, folhagem)
+ *  broto   → verde-folha claro (gramado, folhas decorativas)
+ *  sol     → amarelo dourado (sol do logo) — destaques pontuais
+ *  telha   → terracota (telhado) — detalhes quentes
+ *  piscina → azul (piscina) — uso mínimo
+ *  creme   → off-white quente para alternar seções com o branco
+ */
+@theme {
+  --font-sans: 'Nunito Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Fraunces Variable', ui-serif, Georgia, serif;
 
-* {
-  box-sizing: border-box;
+  --color-mata-50: #f2f8ee;
+  --color-mata-100: #e2efd9;
+  --color-mata-200: #c6e0b5;
+  --color-mata-300: #9fcb85;
+  --color-mata-400: #74b055;
+  --color-mata-500: #4f9436;
+  --color-mata-600: #3b7a2a;
+  --color-mata-700: #2b6a2e;
+  --color-mata-800: #24502a;
+  --color-mata-900: #1d3f23;
+  --color-mata-950: #0f2414;
+
+  --color-broto-100: #eef7dc;
+  --color-broto-300: #c5e38a;
+  --color-broto-500: #8cc63f;
+  --color-broto-700: #5c8a1f;
+
+  --color-sol-100: #fef5d7;
+  --color-sol-300: #f9d46b;
+  --color-sol-400: #f5be3a;
+  --color-sol-500: #e9a814;
+  --color-sol-800: #6b4a05;
+
+  --color-telha-100: #fbe6da;
+  --color-telha-400: #e58450;
+  --color-telha-500: #d2652e;
+  --color-telha-700: #93421b;
+
+  --color-piscina-100: #ddf0fb;
+  --color-piscina-500: #2e97d4;
+
+  --color-creme: #fbfaf4;
+
+  --color-whatsapp: #25d366;
 }
 
-html,
-body,
-#app {
-  min-height: 100%;
+/* Tokens semânticos do shadcn/ui mapeados para a paleta */
+:root {
+  --radius: 0.875rem;
+
+  --background: #ffffff;
+  --foreground: #1b2b1f;
+  --card: #ffffff;
+  --card-foreground: #1b2b1f;
+  --popover: #ffffff;
+  --popover-foreground: #1b2b1f;
+  --primary: var(--color-mata-700);
+  --primary-foreground: #ffffff;
+  --secondary: var(--color-mata-100);
+  --secondary-foreground: var(--color-mata-900);
+  --muted: #f3f5ef;
+  --muted-foreground: #56665a;
+  --accent: var(--color-sol-100);
+  --accent-foreground: var(--color-sol-800);
+  --destructive: #c8372a;
+  --border: #e1e8da;
+  --input: #e1e8da;
+  --ring: var(--color-mata-500);
 }
 
-body {
-  margin: 0;
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 16px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
 }
 
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+    font-optical-sizing: auto;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
