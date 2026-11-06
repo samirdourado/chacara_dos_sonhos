@@ -1,5 +1,5 @@
 import { Link } from '@tanstack/react-router'
-import { CalendarHeart, Images, MapPin } from 'lucide-react'
+import { CalendarHeart, Images } from 'lucide-react'
 
 import { WhatsAppIcon } from '@/components/icons'
 import { Badge } from '@/components/ui/badge'
@@ -71,11 +71,6 @@ export function Hero() {
               </Link>
             </Button>
           </div>
-
-          <p className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-muted-foreground">
-            <MapPin className="size-4 text-telha-500" />
-            {site.address.district} · {site.address.city} - {site.address.state}
-          </p>
         </div>
 
         <InvitationCard />

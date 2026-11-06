@@ -1,7 +1,7 @@
 import type { LucideIcon } from 'lucide-react'
 import { Briefcase, Cake, Baby, Heart } from 'lucide-react'
 
-const phoneDigits = '11974225123'
+const phoneDigits = '11951947543'
 
 const address = {
   street: 'Rua Gralha, 680',
@@ -21,7 +21,7 @@ export const site = {
     url: 'https://www.instagram.com/chacarasonhos680/',
   },
   phone: {
-    display: '(11) 97422-5123',
+    display: '(11) 95194-7543',
     tel: `tel:+55${phoneDigits}`,
     whatsapp: `55${phoneDigits}`,
   },
