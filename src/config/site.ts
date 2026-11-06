@@ -78,6 +78,7 @@ export function whatsappLink(message?: string) {
 
 export const navItems = [
   { hash: 'eventos', label: 'Eventos' },
+  { hash: 'galeria', label: 'Galeria' },
   { hash: 'como-reservar', label: 'Como reservar' },
   { hash: 'localizacao', label: 'Localização' },
 ] as const
