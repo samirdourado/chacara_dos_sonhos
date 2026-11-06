@@ -12,7 +12,8 @@
     "preview": "vite preview",
     "lint": "eslint",
     "format": "prettier --write . && eslint --fix",
-    "check": "prettier --check ."
+    "check": "prettier --check .",
+    "media:optimize": "node scripts/optimize-media.mjs"
   },
   "dependencies": {
     "@fontsource-variable/fraunces": "^5.3.0",

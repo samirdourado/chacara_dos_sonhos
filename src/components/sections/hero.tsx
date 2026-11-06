@@ -1,6 +1,7 @@
-import { CalendarHeart, MapPin } from 'lucide-react'
+import { Link } from '@tanstack/react-router'
+import { CalendarHeart, Images, MapPin } from 'lucide-react'
 
-import { InstagramIcon, WhatsAppIcon } from '@/components/icons'
+import { WhatsAppIcon } from '@/components/icons'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { eventTypes, site, whatsappLink } from '@/config/site'
@@ -36,8 +37,9 @@ export function Hero() {
           </h1>
 
           <p className="mt-7 max-w-xl text-lg text-muted-foreground text-pretty sm:text-xl">
-            Piscina, gramado e sombra de árvore para aniversários, chás de bebê,
-            cerimônias e confraternizações de equipe em Franco da Rocha.
+            Piscinas, salão coberto e varanda com vista para a mata para
+            aniversários, chás de bebê, cerimônias e confraternizações de equipe
+            em Franco da Rocha.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -63,10 +65,10 @@ export function Hero() {
               variant="outline"
               className="h-12 rounded-full border-mata-200 px-7 text-base text-mata-800 hover:bg-mata-50 hover:text-mata-900"
             >
-              <a href={site.instagram.url} target="_blank" rel="noreferrer">
-                <InstagramIcon className="size-5" />
-                Ver fotos no Instagram
-              </a>
+              <Link to="/" hash="galeria">
+                <Images className="size-5" />
+                Ver fotos e vídeos
+              </Link>
             </Button>
           </div>
 

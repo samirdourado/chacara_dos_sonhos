@@ -11,3 +11,8 @@ dist-ssr
 .vinxi
 __unconfig*
 todos.json
+
+# Mídias originais do cliente (pesadas). O site usa as versões otimizadas
+# em src/assets/gallery, geradas com `npm run media:optimize`.
+src/assets/images/
+src/assets/videos/
