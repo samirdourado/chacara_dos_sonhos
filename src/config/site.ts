@@ -15,6 +15,8 @@ const fullAddress = `${address.street} - ${address.district}, ${address.city} - 
 
 export const site = {
   name: 'Chácara dos Sonhos',
+  url: 'https://chacaradossonhos.com.br/',
+  ogImage: '/og-image.jpg',
   tagline: 'Espaço para eventos e confraternizações em Franco da Rocha',
   instagram: {
     handle: '@chacarasonhos680',
